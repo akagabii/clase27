@@ -1,7 +1,7 @@
 const {sumar,restar,multiplicar,dividir} = require('./modules/calculadora')
 const comando = process.argv[2];
-const numeroA = process.argv[3];
-const numeroB = process.argv[4];
+const numeroA = +process.argv[3];
+const numeroB = +process.argv[4];
 
 switch (comando) {
     case "sumar":
@@ -17,10 +17,9 @@ switch (comando) {
         console.log(dividir(numeroA,numeroB));
         break;
     case "undefined":
-        console.log("No entiendo que queres hacer");
+        console.log("Tenes que ingresar un comando");
         break;
- 
-
     default:
+        console.log("El comando es incorrecto");
         break;
 }
